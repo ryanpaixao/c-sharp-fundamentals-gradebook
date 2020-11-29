@@ -9,7 +9,7 @@ namespace GradeBook
         public Book(string name)
         {
             grades = new List<double>();
-            this.name = name;
+            Name = name;
         }
         public void AddGrade(double grade)
         {
@@ -35,6 +35,6 @@ namespace GradeBook
         // grades here is what's known as a "field".
         // A variable to keep track of state. Should be outside public method.
         private List<double> grades;
-        private string name;
+        public string Name;
     }
 }
