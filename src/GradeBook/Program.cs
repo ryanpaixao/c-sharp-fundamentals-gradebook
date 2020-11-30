@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace GradeBook
@@ -17,6 +17,7 @@ namespace GradeBook
             System.Console.WriteLine($"The lowest grade is {stats.Low:N1}");
             System.Console.WriteLine($"The highest grade is {stats.High:N1}");
             System.Console.WriteLine($"The average grade is {stats.Average:N1}");
+            System.Console.WriteLine($"The letter grade is {stats.Letter}");
         }
     }
 }
