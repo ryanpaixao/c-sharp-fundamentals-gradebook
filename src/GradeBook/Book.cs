@@ -7,6 +7,11 @@ namespace GradeBook
 
     public class NamedObject // Base Class
     {
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+
         public string Name
         {
             get;
@@ -17,7 +22,7 @@ namespace GradeBook
     public class Book : NamedObject // Derived class Book from Base Class of NamedObject
     {
         // Constructor for Book class
-        public Book(string name)
+        public Book(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
