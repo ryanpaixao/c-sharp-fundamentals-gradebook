@@ -113,6 +113,29 @@ namespace GradeBook
         // grades here is what's known as a "field".
         // A variable to keep track of state. Should be outside public method.
         private List<double> grades;
-        public string Name;
+
+        // private string name;
+        // public string Name
+        // {
+        //     get
+        //     {
+        //         return name;
+        //     }
+        //     set{
+        //         if(!String.IsNullOrEmpty(value))
+        //         {
+        //             name = value;
+        //         }
+        //     }
+        // }
+
+        // bellow is succinct version of code above.
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        public const string CATEGORY = "Science";
     }
 }
