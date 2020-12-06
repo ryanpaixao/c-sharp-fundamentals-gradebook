@@ -19,10 +19,19 @@ namespace GradeBook
         }
     }
 
-    public class Book : NamedObject // Derived class Book from Base Class of NamedObject
+    public abstract class BookBase : NamedObject
+    {
+        public BookBase(string name) : base(name)
+        {
+        }
+
+        public abstract void AddGrade(double grade);
+    }
+
+    public class InMemoryBook : BookBase // Derived class Book from Base Class of NamedObject
     {
         // Constructor for Book class
-        public Book(string name) : base(name)
+        public InMemoryBook(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
@@ -47,7 +56,7 @@ namespace GradeBook
                     break;
             }
         }
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade) // Addgrade can be overridden because inherited method is abstract
         {
             if(grade <= 100 && grade >= 0)
             {
