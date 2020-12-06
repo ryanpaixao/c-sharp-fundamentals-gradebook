@@ -4,7 +4,17 @@ using System.Collections.Generic;
 namespace GradeBook
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
-    public class Book
+
+    public class NamedObject // Base Class
+    {
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+
+    public class Book : NamedObject // Derived class Book from Base Class of NamedObject
     {
         // Constructor for Book class
         public Book(string name)
@@ -137,11 +147,6 @@ namespace GradeBook
         // }
 
         // bellow is succinct version of code above.
-        public string Name
-        {
-            get;
-            set;
-        }
 
         public const string CATEGORY = "Science";
     }

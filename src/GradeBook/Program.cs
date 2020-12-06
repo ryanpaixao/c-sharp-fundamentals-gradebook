@@ -9,9 +9,6 @@ namespace GradeBook
         {
             var book = new Book("Ryan's Grade Book");
             book.GradeAdded += OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
-            book.GradeAdded -= OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
 
             // Add user input from terminal
             while (true)
