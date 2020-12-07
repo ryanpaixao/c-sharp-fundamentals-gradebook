@@ -1,3 +1,7 @@
 # Ignore Bin and Obj directories
 **/[Bb]in/
 **/[Oo]bj/
+
+# Ignore notes
+**/*.note
+Notes/
